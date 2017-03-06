@@ -113,39 +113,68 @@ namespace AtelierXNA
         }
         protected override void InitialiserSommets()
         {
+            DeltaTexture = new Vector2(1f / 15, 1f / 15);
             int NoSommet = -1;
+            int facteur_y = 0;
             for (int j = 0; j < NbRangées; ++j)
             {
-                float facteur_x = 0;
+                int facteur_x = 0;
                 for (int i = 0; i < NbColonnes; ++i)
                 {
                     int facteur = 0;
                     float hauteur = PtsSommets[i, j].Y + PtsSommets[i + 1, j].Y + PtsSommets[i, j + 1].Y;
 
-                    if(hauteur != 0)
+                    if (hauteur != 0)
                     {
-                        facteur = 1;
+                        facteur = 1 / NB_NIVEAUX_TEXTURE;
                     }
-                    Vector2 texture = new Vector2(0, facteur * DeltaTexture.Y);
+                    Vector2 texture = new Vector2(facteur_x * DeltaTexture.X, facteur_y * DeltaTexture.Y + facteur);
 
-                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j], texture + new Vector2(facteur_x,0));
-                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j + 1], texture + new Vector2(facteur_x, DeltaTexture.Y));
-                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j], texture + new Vector2(facteur_x + DeltaTexture.X, 0));
+                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j], texture);
+                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j + 1], texture + new Vector2(0, DeltaTexture.Y));
+                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j], texture + new Vector2(DeltaTexture.X, 0));
 
                     hauteur = PtsSommets[i, j + 1].Y + PtsSommets[i + 1, j].Y + PtsSommets[i + 1, j + 1].Y;
                     if (hauteur != 0)
                     {
-                        facteur = 1;
+                        facteur = 1 / NB_NIVEAUX_TEXTURE;
                     }
-                    texture = new Vector2(0, facteur * DeltaTexture.Y);
+                    texture = new Vector2(facteur_x * DeltaTexture.X, facteur_y * DeltaTexture.Y + facteur);
 
-                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j], texture + new Vector2(facteur_x + DeltaTexture.X, 0));
-                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j + 1], texture + new Vector2(facteur_x, DeltaTexture.Y));
-                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j + 1], texture + new Vector2(facteur_x + DeltaTexture.X, DeltaTexture.Y));
+                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j], texture + new Vector2(DeltaTexture.X, 0));
+                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j + 1], texture + new Vector2(0, DeltaTexture.Y));
+                    Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j + 1], texture + new Vector2(DeltaTexture.X, DeltaTexture.Y));
 
-                    //facteur_x += 1 / 15;
+                    facteur_x++;
                 }
+                facteur_y++;
             }
+
+
+            //int NoSommet = -1;
+            //for (int j = 0; j < NbRangées; ++j)
+            //{
+            //    for (int i = 0; i < NbColonnes; ++i)
+            //    {
+            //        float hauteurMoyenne = (PtsSommets[i, j].Y + PtsSommets[i + 1, j].Y + PtsSommets[i, j + 1].Y) / 3;
+            //        int facteur = (int)(hauteurMoyenne / 2);
+            //        Vector2 texture = new Vector2(0, facteur * DeltaTexture.Y);
+
+            //        Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j], texture);
+            //        Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j + 1], texture + new Vector2(0, DeltaTexture.Y));
+            //        Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j], texture + new Vector2(DeltaTexture.X, 0));
+
+            //        hauteurMoyenne = (PtsSommets[i, j + 1].Y + PtsSommets[i + 1, j].Y + PtsSommets[i + 1, j + 1].Y) / 3;
+            //        facteur = (int)hauteurMoyenne / 2;
+            //        texture = new Vector2(0, facteur * DeltaTexture.Y);
+
+            //        Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j], texture + new Vector2(DeltaTexture.X, 0));
+            //        Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i, j + 1], texture + new Vector2(0, DeltaTexture.Y));
+            //        Sommets[++NoSommet] = new VertexPositionTexture(PtsSommets[i + 1, j + 1], texture + new Vector2(DeltaTexture.X, DeltaTexture.Y));
+            //    }
+            //}
+
+
         }
 
         public override void Draw(GameTime gameTime)

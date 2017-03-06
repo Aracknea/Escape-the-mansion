@@ -126,9 +126,10 @@
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Atelier 15Content\Atelier 15Content.contentproj">
-      <Name>Atelier_15Content</Name>
+    <ProjectReference Include="..\Atelier 15Content\EscapethemansionContent.contentproj">
+      <Name>EscapethemansionContent</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{B8276347-AF90-4DB7-A3F0-07BA576384DF}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

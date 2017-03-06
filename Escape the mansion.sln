@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atelier 15", "Atelier 15\Atelier 15\Atelier 15.csproj", "{CFA38EF7-EB9F-49BA-A6FD-2DCD4B575C28}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escape the mansion", "Atelier 15\Atelier 15\Escape the mansion.csproj", "{CFA38EF7-EB9F-49BA-A6FD-2DCD4B575C28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atelier 15Content", "Atelier 15\Atelier 15Content\Atelier 15Content.contentproj", "{B8276347-AF90-4DB7-A3F0-07BA576384DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscapethemansionContent", "Atelier 15\Atelier 15Content\EscapethemansionContent.contentproj", "{B8276347-AF90-4DB7-A3F0-07BA576384DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
