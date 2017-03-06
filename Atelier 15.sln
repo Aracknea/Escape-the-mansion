@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atelier 15", "Atelier 15\Atelier 15\Atelier 15.csproj", "{CFA38EF7-EB9F-49BA-A6FD-2DCD4B575C28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atelier 15Content", "Atelier 15\Atelier 15Content\Atelier 15Content.contentproj", "{B8276347-AF90-4DB7-A3F0-07BA576384DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFA38EF7-EB9F-49BA-A6FD-2DCD4B575C28}.Debug|x86.ActiveCfg = Debug|x86
+		{CFA38EF7-EB9F-49BA-A6FD-2DCD4B575C28}.Debug|x86.Build.0 = Debug|x86
+		{CFA38EF7-EB9F-49BA-A6FD-2DCD4B575C28}.Release|x86.ActiveCfg = Release|x86
+		{CFA38EF7-EB9F-49BA-A6FD-2DCD4B575C28}.Release|x86.Build.0 = Release|x86
+		{B8276347-AF90-4DB7-A3F0-07BA576384DF}.Debug|x86.ActiveCfg = Debug|x86
+		{B8276347-AF90-4DB7-A3F0-07BA576384DF}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

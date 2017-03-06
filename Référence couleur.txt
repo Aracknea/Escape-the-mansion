@@ -1,0 +1,22 @@
+Tout blanc: mur
+Tout noir: plancher
+
+RGB:
+
+Chaise: 				R = 160
+Clé: +  					G = 200
+Table:  				R = 170
+Boîte en bois: +			R = 180	G = 210
+Télé: +						G = 220			
+Couronne: +					G = 230
+Chandelier: +						B = 250
+Chandelier de table: +				G = 240
+Commode: 				R = 190
+Fauteuil armchair:			R = 200
+Livre:+						G = 250
+Fireplace:				R = 210
+Rideau:					R = 220
+Floor Lampe:				R = 230
+Pouffe:					R = 240
+Bibliothèque:				R = 250
+
